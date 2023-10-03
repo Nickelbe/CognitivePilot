@@ -2,3 +2,6 @@ build*
 *.swp
 *.swo
 
+covariance.txt
+output.txt
+
