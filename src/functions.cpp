@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <iostream>
@@ -53,14 +52,14 @@ void DataReading(DataBlock *Data, int Dimension)
     char Buffer[512];
 	memset(Buffer, 0, sizeof Buffer);
 
-    fopen_s(&pf, DATA_FILENAME, "r");
+    pf = fopen(DATA_FILENAME, "r");
 
     fgets(Buffer, sizeof Buffer, pf);
 
     for (long ll = 0; ll < Dimension; ll++)
 	{
         fgets(Buffer, sizeof Buffer, pf);
-        sscanf_s(Buffer, "%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf",
+        sscanf(Buffer, "%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf",
         &Data[ll].Time,
         &Data[ll].FlagGPS,
         &Data[ll].Lon,

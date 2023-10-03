@@ -1,3 +1,5 @@
+#pragma once 
+
 #include "structures.h"
 #include <Eigen/Dense>
 
