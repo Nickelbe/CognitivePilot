@@ -23,12 +23,13 @@ conan install .. --build=missing
 Проектная генерация cmake:
 
 ```
-cmake .. -GNinja -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+cmake .. -GNinja --profile=release 
 ```
 
 Сборка
 
 ```
+cd Release
 ninja
 ```
 

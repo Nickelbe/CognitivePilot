@@ -2,6 +2,7 @@ build*
 *.swp
 *.swo
 
+CMakeUserPresets.json
 covariance.txt
 output.txt
 
