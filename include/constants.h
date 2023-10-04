@@ -1,6 +1,9 @@
+#pragma once
+
+#include <cmath>
+
 #define DATA_FILENAME "mxm_data.txt"
 
-double const M_PI         =  3.14159265358979;
 double const M_WPI        = (2.0*M_PI);
 double const M_HALF_PI    = (0.5*M_PI);
 double const M_QUARTER_PI = (0.25*M_PI);

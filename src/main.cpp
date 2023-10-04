@@ -11,13 +11,11 @@ using namespace Eigen;
 
 int main(void) 
 {
-    FILE* out = NULL;
-    fopen_s(&out, "output.txt", "w");
+    FILE* out = fopen("output.txt", "w");
     fprintf(out, "%-17s %-25s%-25s%-25s%-25s%-25s%-25s%-25s%-25s\n", "Time[s]", "x[m]", "y[m]", 
         "x_gps[m]", "y_gps[m]", "yaw[d]", "k_v", "c_0", "c_1");
 
-    FILE* cov = NULL;
-    fopen_s(&cov, "covariance.txt", "w");
+    FILE* cov = fopen("covariance.txt", "w");
     fprintf(cov, "%-17s %-25s%-25s%-25s%-25s%-25s%-25s\n", "Time[s]", "SigmaDx[m]", "SigmaDy[m]",
         "SigmaDpsi[d]", "Sigmak_v", "Sigmak_0", "Sigmak_1");
 
